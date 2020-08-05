@@ -1,0 +1,111 @@
+{
+   "options": [
+      {
+         "option": "high-availability",
+         "settings": ["zookeeper","NONE"],
+         "type" : "compile-time"
+      },
+      {
+         "option": "high-availability.zookeeper.client.acl",
+         "settings": ["creator","open","NULL"],
+         "type" : "compile-time"
+      },
+      {
+         "option": "state.backend",
+         "settings": ["jobmanager","filesystem","rocksdb"],
+         "type" : "compile-time"
+      },
+      {
+         "option": "state.backend.incremental",
+         "settings": ["false","true"],
+         "type" : "compile-time"
+      },
+      {
+         "option": "web.sumbit.enable",
+         "settings": ["false","true"],
+         "type" : "compile-time"
+      },
+      {
+         "option": "classloader.resolve-order",
+         "settings": ["child-first","parent-first"],
+         "type" : "compile-time"
+      },  
+      {
+         "option": "security.kerberos.login.use-ticket-cache",
+         "settings": ["false","true"],
+         "type" : "compile-time"
+      },
+   
+      {
+         "option": "yarn.per-job-cluster.include-user-jar",
+         "settings": ["FIRST","LAST","ORDERED","DISABLED"],
+         "type" : "compile-time"
+      },
+      {
+         "option": "mesos.resourcemanager.artifactserver.ssl.enabled",
+         "settings": ["false","true"],
+         "type" : "compile-time"
+      },
+      {
+         "option": "mesos.resourcemanager.tasks.container.docker.force-pull-image",
+         "settings": ["false","true"],
+         "type" : "compile-time"
+      },
+      {
+         "option": "state.backend.rocksdb.memory.managed",
+         "settings": ["false","true"],
+         "type" : "compile-time"
+      },
+      {
+         "option": "metrics.system-resource",
+         "settings": ["false","true"],
+         "type" : "compile-time"
+      },
+      {
+         "option": "state.backend.async",
+         "settings": ["false","true"],
+         "type" : "compile-time"
+      },
+      {
+         "option": "jobmanager.execution.failover-strategy",
+         "settings": ["full","region","NULL"],
+         "type" : "compile-time"
+      },
+      {
+         "option": "cluster.evenly-spread-out-slots",
+         "settings": ["false","true"],
+         "type" : "compile-time"
+      }, 
+      {
+         "option": "taskmanager.jvm-exit-on-oom",
+         "settings": ["false","true"],
+         "type" : "compile-time"
+      },
+      {
+         "option": "taskmanager.network.bind-policy",
+         "settings": ["ip","name"],
+         "type" : "compile-time"
+      },
+      {
+         "option": "security.ssl.rest.enabled",
+         "settings": ["false","true"],
+         "type" : "compile-time"
+      },
+      {
+         "option": "security.ssl.rest.authentication-enabled",
+         "settings": ["false","true"],
+         "type" : "compile-time"
+      },
+      {
+         "option": "security.ssl.internal.enabled",
+         "settings": ["false","true"],
+         "type" : "compile-time"
+      }   
+   ],
+
+   "constraints": [
+    [["high-availability","NONE"], ["high-availability.zookeeper.client.acl", "creator"]],
+    [["high-availability","NONE"], ["high-availability.zookeeper.client.acl", "open"]]
+]
+
+}

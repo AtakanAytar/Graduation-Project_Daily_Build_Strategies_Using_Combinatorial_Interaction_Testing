@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# To checkout master branch
+git checkout origin
+
+# Go to the first commit that is done before given date, i.e., date: $1 and hour: $2
+git checkout `git rev-list -n 1 --first-parent --before="$1 $2" origin`
+
+
